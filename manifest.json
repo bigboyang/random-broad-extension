@@ -1,0 +1,22 @@
+{
+    "name": "Random Broad Extensions",
+    "description": "Random Broad Extensions",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "storage"
+      ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "content_scripts": [
+		{
+            "matches": ["<all_urls>"],
+			"js": ["jquery3.5.1.js", "contentscript.js"]
+		}
+	],
+    "background": {
+        "service_worker": "background.js"
+      }
+  }
